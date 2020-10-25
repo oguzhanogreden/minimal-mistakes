@@ -1,6 +1,8 @@
 /* ==========================================================================
    Forms
    ========================================================================== */
+$input-padding: 0.25em;
+$form-one-liner-button-width: 8rem;
 
 form {
   margin: 0 0 5px 0;
@@ -78,7 +80,7 @@ textarea,
 select {
   display: inline-block;
   width: 100%;
-  padding: 0.25em;
+  padding: $input-padding;
   margin-bottom: 0.5em;
   color: $text-color;
   background-color: $background-color;
@@ -391,3 +393,46 @@ select:focus {
 #goog-wm-sb {
   @extend .btn;
 }
+
+/*
+     .form-search
+     ========================================================================== */
+
+.form-one-liner {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1em;
+  padding-right: 1em;
+  max-width: 100%;
+
+  @include breakpoint($x-large) {
+    max-width: $max-width;
+  }
+
+  font-size: $type-size-5;
+}
+
+.form-one-liner form {
+  background-color: unset;
+}
+
+.form-one-liner input {
+  border: 1px solid $primary-color;
+}
+
+.form-one-liner input[type="text"] {
+  border: 1px solid $primary-color;
+  width: calc(100% - #{$input-padding} - #{$form-one-liner-button-width});
+}
+
+.form-one-liner input[type="submit"] {
+  width: $form-one-liner-button-width;
+}
+
+.form-one-liner .btn--primary {
+  padding: $input-padding;
+  font-size: unset;
+}
+
+
+
