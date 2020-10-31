@@ -418,7 +418,7 @@ select:focus {
   border: 1px solid $primary-color;
 }
 
-.form-one-liner input[type="text"] {
+.form-one-liner input[type="email"] {
   border: 1px solid $primary-color;
   width: calc(100% - #{$input-padding} - #{$form-one-liner-button-width});
 }
