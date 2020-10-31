@@ -401,8 +401,6 @@ select:focus {
 .form-one-liner {
   margin-left: auto;
   margin-right: auto;
-  padding-left: 1em;
-  padding-right: 1em;
   max-width: 100%;
 
   @include breakpoint($x-large) {
