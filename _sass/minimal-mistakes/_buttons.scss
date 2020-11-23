@@ -55,7 +55,7 @@
         @include yiq-contrasted($color);
       }
 
-      &:hover {
+      &:hover:not([disabled]) {
         @include yiq-contrasted(mix(#000, $color, 20%));
       }
     }

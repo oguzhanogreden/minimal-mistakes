@@ -1,6 +1,9 @@
 /* ==========================================================================
    Forms
    ========================================================================== */
+$input-padding: 0.25em;
+$text-input-border: 1px;
+$form-one-liner-button-width: 8rem;
 
 form {
   margin: 0 0 5px 0;
@@ -78,7 +81,7 @@ textarea,
 select {
   display: inline-block;
   width: 100%;
-  padding: 0.25em;
+  padding: calc(#{$input-padding} - #{$text-input-border});
   margin-bottom: 0.5em;
   color: $text-color;
   background-color: $background-color;
@@ -329,36 +332,6 @@ select:focus {
 }
 
 /*
-     .form--loading
-     ========================================================================== */
-
-.form--loading:before {
-  content: "";
-}
-
-.form--loading .form__spinner {
-  display: block;
-}
-
-.form:before {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(255, 255, 255, 0.7);
-  z-index: 10;
-}
-
-.form__spinner {
-  display: none;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  z-index: 11;
-}
-
-/*
      Google search form
      ========================================================================== */
 
@@ -391,3 +364,44 @@ select:focus {
 #goog-wm-sb {
   @extend .btn;
 }
+
+/*
+     .form-search
+     ========================================================================== */
+
+.form-one-liner {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
+
+  @include breakpoint($x-large) {
+    max-width: $max-width;
+  }
+
+  font-size: $type-size-5;
+}
+
+.form-one-liner form {
+  background-color: unset;
+}
+
+.form-one-liner input {
+  border: $text-input-border solid $primary-color;
+}
+
+.form-one-liner input[type="email"] {
+  border: 1px solid $primary-color;
+  width: calc(100% - #{$input-padding} - #{$form-one-liner-button-width});
+}
+
+.form-one-liner button[type="submit"] {
+  width: $form-one-liner-button-width;
+}
+
+.form-one-liner .btn--primary {
+  padding: $input-padding;
+  font-size: unset;
+}
+
+
+
