@@ -30,6 +30,7 @@ feature_row:
     url: "#test-link"
     btn_label: "Buy Now"
     btn_class: "btn--primary"
+newsletter_subscription: true
 ---
 
 {% include feature_row id="intro" type="center" %}
