@@ -1,8 +1,11 @@
 
 <div class="form-one-liner">
-    <form action="https://hook.integromat.com/fnfjacm07yb3p4angtplam32nbr6aevp" method="post" class="form">
+    <form class="form" id="newsletter-subscription-form">
         <input style="display: none;" value="honeypot" type="text" name="name" id="name" required>
-        <input type="email" name="email" id="name" placeholder="Subscribe to our newsletter!" required>
-        <input class="btn btn--primary" type="submit" value="Subscribe!">
+        <input type="email" name="email" id="email" placeholder="Subscribe to our newsletter!" required>
+        <button class="btn btn--primary" type="submit">
+            <div class="spinner" hidden></div>
+            <span>Subscribe</span>
+        </button>
     </form>
 </div>
